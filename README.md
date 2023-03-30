@@ -29,11 +29,13 @@ Timer1이라는 기능을 이용하여 사각 파형을 생성해서 Output을 �
 |함수|기능|설명|
 |------|:---:|---|
 |Timer1.initialize()|Timer1 초기화||
-|Timer1.pwm()|특정한 핀에 사각 파형 생성|Timer1.pwm(pin, duty)|
+|Timer1.pwm()|특정한 핀에 사각 파형 생성|Timer1.pwm(pin, duty)<br>duty : 0~1023|
 |Timer1.setPeriod()|마이크로초 단위로 주기 설정|Timer1.setPeriod(1000000) : 1Hz<br>Timer1.setPeriod(1000000/10) : 10Hz|
-|Timer1.setPwmDuty()|주어진 핀에 사각파형의 duty 설정|Timer1.setPwmDuty(pin, duty)<br>duty : 0~1023|
+|Timer1.setPwmDuty(pin,duty)|주어진 핀에 사각파형의 duty 설정|Timer1.setPwmDuty(LED, 511) : 중간 밝기<br>Timer1.setPwmDuty(LED, 100) : 어두움<br>Timer1.setPwmDuty(LED, 900) : 밝음<br>Timer1.setPwmDuty(SERVO, angle)|
 |millis()|경과된 시간||
 
 <hr/>
 
-## 3. Push Button & Debounce
+## 3. Button Interrupt
+
+<hr/>
